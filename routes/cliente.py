@@ -24,7 +24,7 @@ def get_clientes():
         ])
         for c in clientes
     ]
-    return Response(json.dumps(response), mimetype='application/json') #Transforma a lista em um JSON, e retorna a resposta com o tipo de conteúdo application/json.
+    return Response(json.dumps(response, ensure_ascii=False), mimetype='application/json') #Transforma a lista em um JSON, e retorna a resposta com o tipo de conteúdo application/json.
 
 @cliente_bp.route('/', methods=['POST'])
 def create_cliente():
