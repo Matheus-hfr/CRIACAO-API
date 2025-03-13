@@ -11,8 +11,8 @@ app.config['JSON_SORT_KEYS'] = False  # Desativa a ordenação dos campos JSON.
 db.init_app(app)  # Inicializa o banco de dados.
 migrate = Migrate(app, db)  # Inicializa a migração.
 
-from routes.cliente import cliente_bp                     #IMPORTAÇÃO DAS ROTAS  
-from routes.produto import produto_bp
+from routes.cliente import cliente_bp                    #IMPORTAÇÃO DAS ROTAS 
+from routes.produto import produto_bp                    #IMPORTAÇÃO DAS ROTAS
 from routes.pedido import pedido_bp
 from routes.item_pedido import item_pedido_bp
 
